@@ -1,5 +1,6 @@
 //modelo mvc
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 const ProductSchema = new mongoose.Schema({
   title: {
@@ -20,6 +21,6 @@ const ProductSchema = new mongoose.Schema({
   }
 });
 
-
+ProductSchema.plugin(mongoosePaginate);
 //registro de product 
 mongoose.model('Product', ProductSchema);
