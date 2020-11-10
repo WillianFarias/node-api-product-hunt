@@ -21,4 +21,4 @@ requireDir("./src/models");
 app.use('/api', require('./src/routes'));
 
 //http://localhost:3001/
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
